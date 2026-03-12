@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius Kortkamp - Flash</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            /* Cor inicial vibrante */
+            background-color: #ff0000; 
+            font-family: 'Arial Black', sans-serif;
+            /* Animação de ciclo de cores */
+            animation: colorShift 0.2s infinite linear;
+        }
+
+        h1 {
+            color: white;
+            font-size: 5rem;
+            text-transform: uppercase;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            user-select: none;
+            text-align: center;
+        }
+
+        /* Keyframes para mudar a cor via rotação de matiz (hue) */
+        @keyframes colorShift {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        /* Efeito opcional de "vibração" no texto */
+        .vibrate {
+            animation: shake 0.1s infinite alternate;
+        }
+
+        @keyframes shake {
+            from { transform: translate(2px, 2px); }
+            to { transform: translate(-2px, -2px); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="vibrate">viniciuskortkamp</h1>
+
+    <script>
+        // Se quiser acelerar ainda mais via JS ou mudar cores aleatórias:
+        const body = document.body;
+        
+        // Função para gerar cor aleatória (caso prefira um strobe manual)
+        /*
+        setInterval(() => {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            body.style.backgroundColor = "#" + randomColor;
+        }, 50); // Muda a cada 50ms
+        */
+
+        console.log("Modo frenético ativado para Vinicius Kortkamp!");
+    </script>
+</body>
+</html>
