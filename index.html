@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>vinicius kort kamp</title>
+<style>
+html, body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background 0.2s linear;
+}
+
+#nome {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+</style>
+</head>
+<body>
+
+<div id="nome">vinicius kort kamp</div>
+
+<script>
+function randomColor() {
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    document.body.style.background = `rgb(${r},${g},${b})`;
+}
+
+setInterval(randomColor, 100);
+</script>
+
+</body>
+</html>
